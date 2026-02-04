@@ -22,13 +22,15 @@ body {
 }
 
 .container {
-  max-width: 1152px; /* 6xl */
+  max-width: 1152px;
+  /* 6xl */
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
 .content-container {
-  max-width: 896px; /* 4xl */
+  max-width: 896px;
+  /* 4xl */
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -147,7 +149,7 @@ footer h2 {
 .boxy-card {
   background-color: var(--bg-primary);
   border: 2px solid black;
-  box-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
+  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
   transition: all 0.2s ease;
   padding: 2rem;
   display: flex;
@@ -164,7 +166,7 @@ footer h2 {
 
 .boxy-card:hover {
   transform: translate(2px, 2px);
-  box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
 }
 
 .btn-pill {
@@ -204,7 +206,7 @@ footer h2 {
   text-decoration: none;
   color: black;
   transition: all 0.2s;
-  box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
 }
 
 .btn-action:hover {
@@ -215,8 +217,15 @@ footer h2 {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade {
@@ -239,12 +248,18 @@ footer h2 {
 /* Profile specific */
 .profile-card {
   background-color: white;
-  border: 2px solid black;
-  padding: 2rem;
-  box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+  border: 3px solid black;
+  padding: 2.5rem;
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1);
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.profile-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 14px 14px 0px 0px rgba(0, 0, 0, 1);
 }
 
 .profile-img-container {
@@ -260,7 +275,12 @@ footer h2 {
 .profile-img-container img {
   width: 100%;
   height: 100%;
-  object-cover: cover;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-card:hover .profile-img-container img {
+  transform: scale(1.1) rotate(2deg);
 }
 
 .profile-name {
@@ -295,16 +315,47 @@ footer h2 {
 }
 
 /* Spacing helpers */
-.space-y-12 > * + * { margin-top: 3rem; }
-.space-y-10 > * + * { margin-top: 2.5rem; }
-.space-y-8 > * + * { margin-top: 2rem; }
+.space-y-12>*+* {
+  margin-top: 3rem;
+}
+
+.space-y-10>*+* {
+  margin-top: 2.5rem;
+}
+
+.space-y-8>*+* {
+  margin-top: 2rem;
+}
 
 /* Utilities */
-.opacity-30 { opacity: 0.3; }
-.opacity-50 { opacity: 0.5; }
-.font-mono { font-family: monospace; }
-.text-lg { font-size: 1.125rem; }
-.text-xl { font-size: 1.25rem; }
-.italic { font-style: italic; }
-.uppercase { text-transform: uppercase; }
-.border-dashed { border-style: dashed; }
+.opacity-30 {
+  opacity: 0.3;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.font-mono {
+  font-family: monospace;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.border-dashed {
+  border-style: dashed;
+}

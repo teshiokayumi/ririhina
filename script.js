@@ -3,14 +3,14 @@ const DATA = {
     {
       id: 'riria',
       name: 'りりあ',
-      image: 'https://raw.githubusercontent.com/teshiokayumi/ririhina/main/img/riria.webp',
+      image: 'riria.jpg',
       description: 'やさしく穏やかな空気にまとういのししな女の子\n言葉やイラストを通して心にそっと寄り添い、小さな安心を届けます。',
       xLink: 'https://x.com/uisakiriria'
     },
     {
       id: 'hinako',
       name: 'ひなこ',
-      image: 'https://raw.githubusercontent.com/teshiokayumi/ririhina/main/img/hinako.jpg',
+      image: 'hinako.jpg',
       description: 'AIアイドルひなこ（安藤緋名子）AIボイス・AI動画／姫路のこともっと言いたい',
       xLink: 'https://x.com/hinako_175_ando'
     }
@@ -134,7 +134,7 @@ const updateUI = () => {
       btn.classList.remove('active');
     }
   });
-  
+
   window.scrollTo(0, 0);
 };
 
