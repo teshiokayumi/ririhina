@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宇猪崎りりあ 1stイラスト集 紹介ページ</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --accent-pink: #ec4899;
+      --accent-pink-dark: #be185d;
+      --soft-pink: #fdf2f8;
+      --bg-riria: #fee2e2;
+    }
+
+    body {
+      background-color: var(--soft-pink);
+      overflow-x: hidden;
+    }
+
+    .riria-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .hero-section {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 6rem;
+    }
+
+    @media (min-width: 900px) {
+      .hero-section {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      z-index: 10;
+    }
+
+    .hero-image-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: -20px;
+      bottom: -20px;
+      background-color: black;
+      z-index: -1;
+      border: 3px solid black;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: auto;
+      border: 4px solid black;
+      display: block;
+      box-shadow: 10px 10px 0px 0px var(--accent-pink);
+      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .hero-image:hover {
+      transform: scale(1.02) translate(-5px, -5px);
+    }
+
+    .hero-content {
+      padding-right: 2rem;
+    }
+
+    .release-badge {
+      display: inline-block;
+      background-color: black;
+      color: white;
+      padding: 0.5rem 1rem;
+      font-weight: 900;
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+      transform: rotate(-2deg);
+    }
+
+    .main-title {
+      font-family: 'Outfit', 'Noto Sans JP', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 2rem;
+      color: black;
+      letter-spacing: -0.02em;
+    }
+
+    .main-title span {
+      color: var(--accent-pink);
+      -webkit-text-stroke: 1px black;
+    }
+
+    .description-box {
+      background: white;
+      border: 3px solid black;
+      padding: 2.5rem;
+      box-shadow: 12px 12px 0px 0px black;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .description-text {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      font-weight: 700;
+      white-space: pre-wrap;
+      color: #1f2937;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .cta-buttons {
+        flex-direction: row;
+      }
+    }
+
+    .btn-booth {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      background-color: var(--accent-pink);
+      color: white;
+      text-decoration: none;
+      padding: 1.25rem 2.5rem;
+      font-size: 1.25rem;
+      font-weight: 900;
+      border: 3px solid black;
+      box-shadow: 6px 6px 0px 0px black;
+      transition: all 0.2s;
+      text-align: center;
+    }
+
+    .btn-booth:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px 0px black;
+      background-color: var(--accent-pink-dark);
+    }
+
+    .youtube-section {
+      background-color: white;
+      border: 3px solid black;
+      padding: 3rem;
+      box-shadow: 16px 16px 0px 0px var(--bg-riria);
+      margin-top: 4rem;
+    }
+
+    .yt-title {
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .yt-title i {
+      color: #ff0000;
+    }
+
+    .yt-info {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .btn-youtube {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background-color: white;
+      color: black;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      font-size: 1.125rem;
+      font-weight: 900;
+      border: 3px solid black;
+      box-shadow: 6px 6px 0px 0px #ff0000;
+      transition: all 0.2s;
+    }
+
+    .btn-youtube:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px 0px #ff0000;
+      background-color: #fff1f2;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 3rem;
+      color: black;
+      font-weight: 800;
+      text-decoration: none;
+      font-size: 1.125rem;
+      border-bottom: 4px solid var(--accent-pink);
+      transition: all 0.2s;
+    }
+
+    .back-link:hover {
+      background-color: var(--accent-pink);
+      color: white;
+      padding: 0.25rem 0.5rem;
+    }
+
+    /* Float animation */
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .floating {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    /* Reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: revealIn 0.8s ease-out forwards;
+    }
+
+    @keyframes revealIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.4s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.6s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="riria-container">
+    <a href="index.html" class="back-link">← ホームに戻る</a>
+
+    <div class="hero-section">
+      <div class="hero-image-wrapper reveal delay-1">
+        <img src="riria1.jpg" alt="宇猪崎りりあ 1stイラスト集" class="hero-image">
+      </div>
+
+      <div class="hero-content reveal">
+        <span class="release-badge delay-2">2025年5月7日公開</span>
+        <h1 class="main-title delay-2">
+          宇猪崎りりあ<br>
+          <span>1stイラスト集</span>
+        </h1>
+
+        <div class="description-box delay-3">
+          <p class="description-text">AIイラストから誕生したイノシシ耳アイドル【宇猪崎りりあ】の
+            1stイラスト集がついに完成
+            いつもよりもチョット大胆なカットも収録しました
+            171ページの大ボリュームなのでりりあ知ってる人も知らない人も
+            あなたのお気に入りのりりあを見つけてみませんか❓</p>
+        </div>
+
+        <div class="cta-buttons reveal delay-3">
+          <a href="https://uisakiriria.booth.pm/items/6891618" target="_blank" rel="noopener noreferrer"
+            class="btn-booth">
+            BOOTHで購入する →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="youtube-section reveal delay-3">
+      <h2 class="yt-title">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+        </svg>
+        ういさきりりあチャンネル
+      </h2>
+      <p class="yt-info">
+        AIイラストから誕生したイノシシ耳アイドル【宇猪崎りりあ】。<br>
+        YouTubeにてショート動画更新中！
+      </p>
+      <a href="https://www.youtube.com/@uisakiriria" target="_blank" rel="noopener noreferrer" class="btn-youtube">
+        YouTubeチャンネルを見る →
+      </a>
+    </div>
+
+    <footer style="margin-top: 6rem; text-align: center; border-top: 2px solid black; padding-top: 2rem;">
+      <p style="font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em;">© 2026 月刊りりひな編集部</p>
+    </footer>
+  </div>
+</body>
+
+</html>

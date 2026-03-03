@@ -5,7 +5,8 @@ const DATA = {
       name: 'りりあ',
       image: 'riria.jpg',
       description: 'やさしく穏やかな空気にまとういのししな女の子\n言葉やイラストを通して心にそっと寄り添い、小さな安心を届けます。',
-      xLink: 'https://x.com/uisakiriria'
+      xLink: 'https://x.com/uisakiriria',
+      pageLink: 'riria.html'
     },
     {
       id: 'hinako',
@@ -85,7 +86,7 @@ const renderProfiles = () => `
       ${DATA.profiles.map(profile => `
         <div class="profile-card">
           <div class="profile-img-container">
-            <img src="${profile.image}" alt="${profile.name}">
+            ${profile.pageLink ? `<a href="${profile.pageLink}"><img src="${profile.image}" alt="${profile.name}"></a>` : `<img src="${profile.image}" alt="${profile.name}">`}
           </div>
           <h3 class="profile-name">${profile.name}</h3>
           <p class="profile-desc">${profile.description}</p>
@@ -97,6 +98,7 @@ const renderProfiles = () => `
     </div>
   </div>
 `;
+
 
 const renderCommunity = () => `
   <div class="animate-fade">
